@@ -6,6 +6,7 @@ def scarica_video(url, path_destinazione=r"C:\Users\moone\Downloads"):
         ydl_opts = {
             'outtmpl': f'{path_destinazione}/%(title)s.%(ext)s',
             'writethumbnail': True,     
+            'ignoreerrors': True,
             'postprocessors': [
                 {  
                     'key': 'EmbedThumbnail',
